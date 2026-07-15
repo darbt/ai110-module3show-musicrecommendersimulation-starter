@@ -21,17 +21,25 @@ Prompts:
 
 ## 3. How the Model Works  
 
-Explain your scoring approach in simple language.  
-
+Explain your scoring approach in simple language. 
+ 
 Prompts:  
 
 - What features of each song are used (genre, energy, mood, etc.)  
+
 - What user preferences are considered  
 - How does the model turn those into a score  
 - What changes did you make from the starter logic  
 
 Avoid code here. Pretend you are explaining the idea to a friend who does not program.
 
+Each song uses the features: artist, energy, BPM, Valence, genre, acousteness, danceability, and mood.
+
+Genre, I believe, is the most important when helping determine if a user will like a song. So that feature will have the highest max point. Energy and mood have the same amount of maxs points because I feel like energy and mood work hand in hand. Low energy is good for a chill or melanchily mood, High energy is good for a happy and excited mood, etc. I also include Artists which is just between Genre and Mood since people tend to like songs from the same Artist. Once we go down the line of features thats when the points start to decrease based on it's "obscurity".
+
+The first starter logic that came from the chatbot only wanted to compare genre and mood on a numerical 0-1 scale. This logic needed to grow to include a lot more factors to make it more accurate. 
+
+Because Genre has the highest max score points, the Ai might prioritize those points. The system may also focus more on a specific artist instead of branching out to newer ones. 
 ---
 
 ## 4. Data  

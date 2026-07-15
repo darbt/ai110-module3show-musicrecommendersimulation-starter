@@ -17,13 +17,23 @@ Replace this paragraph with your own summary of what your version does.
 
 ## How The System Works
 
+Most real-life reccomendations work are based a lot on a user's behavior. This goes beyond just music. When you deliberatly like, save, subscribe to, or thumbs-down something, you are telling systems a lot of information. Recommenders also notice the things that we don't even think twice about, for example. skipping, replays, and completion rate. These behaviors let reccomendation systems know what you like and what you dislike and do its best to infer from there.  
+
 Explain your design in plain language.
+
+My design will mainly focus on the features of songs that are liked and the songs that are disliked or constantly skipped. 
 
 Some prompts to answer:
 
 - What features does each `Song` use in your system
   - For example: genre, mood, energy, tempo
+
+Each song will use, genre, energy, BPM, mood, danceability, and acoustics, 
+
 - What information does your `UserProfile` store
+
+The UserProfile will store a user's top three music genres, their top 5 favorite songs, and their top 5 favorite music artists, as well as their most listened song for the month. 
+
 - How does your `Recommender` compute a score for each song
 - How do you choose which songs to recommend
 
