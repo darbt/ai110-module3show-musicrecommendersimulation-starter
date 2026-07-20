@@ -5,6 +5,7 @@
 Give your model a short, descriptive name.  
 Example: **VibeFinder 1.0**  
 
+EchoMatch 1.0
 ---
 
 ## 2. Intended Use  
@@ -17,6 +18,7 @@ Prompts:
 - What assumptions does it make about the user  
 - Is this for real users or classroom exploration  
 
+This reccomender is supposed to help find songs a user would most likely enjoy, based on a profile that defines their music taste. 
 ---
 
 ## 3. How the Model Works  
@@ -54,6 +56,7 @@ Prompts:
 - Are there parts of musical taste missing in the dataset  
 
 ---
+The model uses a sing list of about 20 songs. Each song has its own genre and numerical features. There is only 20 songs so we are working with a very limited dataset. 
 
 ## 5. Strengths  
 
@@ -66,6 +69,8 @@ Prompts:
 - Cases where the recommendations matched your intuition  
 
 ---
+
+The system works well when working with very clear tastes. So someone who mainly pop will get reccommended pop and exciting songs. Same thing with someone who mainly like Heacy rock songs. 
 
 ## 6. Limitations and Bias 
 
@@ -80,6 +85,8 @@ Prompts:
 
 ---
 
+One weakness that I discovered is that acousticness has no middle ground. Meaning that a song that is considered "mid-acoustic", won't be registered because there is no proper measurement for it. The song is either acoustic or not. 
+
 ## 7. Evaluation  
 
 How you checked whether the recommender behaved as expected. 
@@ -93,6 +100,7 @@ Prompts:
 
 No need for numeric metrics unless you created some.
 
+I tested profiles for exciting pop, a calm study vibe, and heavy rock. These profiles were very distinct so the songs that were reccomended made sense. What I did notice, however, is that because the reccomender chose 5 of the top matched songs no matter what, if there wasn't enough songs that matched the music perfectly, it will still choose songs from other genres, even if the score is extremely low, instead of just ending the list. 
 ---
 
 ## 8. Future Work  
@@ -107,6 +115,7 @@ Prompts:
 - Handling more complex user tastes  
 
 ---
+I would defiently work with a much bigger dataset. I would also want to utiize a user's history and behavior so that the program can learn. Example, imolement a like system so the user can tell the program when it likes or dislikes a song so that it can learn for next time. 
 
 ## 9. Personal Reflection  
 
@@ -117,3 +126,5 @@ Prompts:
 - What you learned about recommender systems  
 - Something unexpected or interesting you discovered  
 - How this changed the way you think about music recommendation apps  
+
+I learned that there is a lot more that goes into reccomendation systems than I initially thought. There are many aspects to a song that a system has to consider. It's not only just based on genre and artist. The AI tools helped me understand how I should develop my scoring system since I had no idea where to start with that and it helped when needing to point out biases. If I were to extend this project, I belive that I would try to incorporate human interaction so that the program can learn. I would also update the scoring system. 
